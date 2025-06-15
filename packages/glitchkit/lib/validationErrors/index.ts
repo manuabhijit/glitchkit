@@ -1,17 +1,16 @@
-import GlitchKitArrayAttributeValidationError from './GlitchKitArrayAttributeValidationError.js';
-import GlitchKitBooleanAttributeValidationError from './GlitchKitBooleanAttributeValidationError.js';
-import GlitchKitDateAttributeValidationError from './GlitchKitDateAttributeValidationError.js';
-import GlitchKitNumericAttributeValidationError from './GlitchKitNumericAttributeValidationError.js';
-import GlitchKitObjectAttributeValidationError from './GlitchKitObjectAttributeValidationError.js';
-import GlitchKitSchemaValidationError from './GlitchKitSchemaValidationError.js';
-import GlitchKitStringAttributeValidationError from './GlitchKitStringAttributeValidationError.js';
+export { default as GlitchKitArrayAttributeValidationError } from './GlitchKitArrayAttributeValidationError';
+export { default as GlitchKitBooleanAttributeValidationError } from './GlitchKitBooleanAttributeValidationError';
+export { default as GlitchKitDateAttributeValidationError } from './GlitchKitDateAttributeValidationError';
+export { default as GlitchKitNumericAttributeValidationError } from './GlitchKitNumericAttributeValidationError';
+export { default as GlitchKitObjectAttributeValidationError } from './GlitchKitObjectAttributeValidationError';
+export { default as GlitchKitSchemaValidationError } from './GlitchKitSchemaValidationError';
+export { default as GlitchKitStringAttributeValidationError } from './GlitchKitStringAttributeValidationError';
 
-export {
-  GlitchKitArrayAttributeValidationError,
-  GlitchKitBooleanAttributeValidationError,
-  GlitchKitDateAttributeValidationError,
-  GlitchKitNumericAttributeValidationError,
-  GlitchKitObjectAttributeValidationError,
-  GlitchKitSchemaValidationError,
-  GlitchKitStringAttributeValidationError,
-};
+// Alternative exports
+export { default as GkArrayAttributeValidationError } from './GlitchKitArrayAttributeValidationError';
+export { default as GkBooleanAttributeValidationError } from './GlitchKitBooleanAttributeValidationError';
+export { default as GkDateAttributeValidationError } from './GlitchKitDateAttributeValidationError';
+export { default as GkNumericAttributeValidationError } from './GlitchKitNumericAttributeValidationError';
+export { default as GkObjectAttributeValidationError } from './GlitchKitObjectAttributeValidationError';
+export { default as GkSchemaValidationError } from './GlitchKitSchemaValidationError';
+export { default as GkStringAttributeValidationError } from './GlitchKitStringAttributeValidationError';

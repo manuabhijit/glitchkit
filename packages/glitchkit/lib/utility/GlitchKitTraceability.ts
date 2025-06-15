@@ -1,10 +1,10 @@
 import IGlitchKitTraceabilityJson from './interfaces/GlitchKitTraceability.interface';
 
 class GlitchKitTraceability {
-  protected _traceId?: string;
-  protected _operation?: string;
-  protected _reported?: boolean;
-  protected _source?: string;
+  private _traceId?: string;
+  private _operation?: string;
+  private _reported?: boolean;
+  private _source?: string;
 
   public get traceId(): string | undefined {
     return this._traceId;
@@ -60,10 +60,10 @@ class GlitchKitTraceability {
 
   public toJson(): IGlitchKitTraceabilityJson {
     const traceability: IGlitchKitTraceabilityJson = {
-      traceId: this._traceId,
-      operation: this._operation,
-      reported: this._reported,
-      source: this._source,
+      traceId: this.traceId,
+      operation: this.operation,
+      reported: this.reported,
+      source: this.source,
     };
     return traceability;
   }

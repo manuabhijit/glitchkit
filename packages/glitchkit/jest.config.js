@@ -14,6 +14,7 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/lib/**/*.{ts,tsx}', // ✅ Include TS/TSX files
     '!<rootDir>/lib/**/index.ts', // ❌ Exclude index.ts
+    '!<rootDir>/lib/glitchkit.ts', // ❌ Exclude glitchkit.ts
     '!<rootDir>/lib/**/*.test.{ts,tsx}', // ❌ Exclude test files
     '!<rootDir>/lib/**/__mocks__/**', // ❌ Exclude mock files
   ],

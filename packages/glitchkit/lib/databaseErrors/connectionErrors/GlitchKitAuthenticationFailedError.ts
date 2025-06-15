@@ -3,6 +3,7 @@ import GlitchKitBaseDatabaseError from '../../baseGlitchKit/GlitchKitBaseDatabas
 class GlitchKitAuthenticationFailedError extends GlitchKitBaseDatabaseError {
   constructor(message: string, errorCode?: number) {
     super(message, errorCode);
+    Object.setPrototypeOf(this, GlitchKitAuthenticationFailedError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
 

@@ -67,18 +67,18 @@ export class GlitchKitMetadata {
     this._cause = cause;
   }
 
-  withCause(cause: string): this {
+  public withCause(cause: string): this {
     this.cause = cause;
     return this;
   }
 
-  toJson(): IGlitchKitMetadataJson {
+  public toJson(): IGlitchKitMetadataJson {
     const glitchkitMetadata: IGlitchKitMetadataJson = {
-      info: this._info,
-      context: this._context,
-      tags: this._tags,
-      category: this._category,
-      cause: this._cause,
+      info: this.info,
+      context: this.context,
+      tags: this.tags,
+      category: this.category,
+      cause: this.cause,
     };
 
     return glitchkitMetadata;

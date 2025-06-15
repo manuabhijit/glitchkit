@@ -8,8 +8,8 @@ import IGlitchKitBaseErrorJson from './interfaces/GlitchKitBaseError.interface';
  */
 abstract class GlitchKitBaseError extends Error {
   // Properties for traceability and metadata
-  public traceability = new GlitchKitTraceability();
-  public metadata = new GlitchKitMetadata();
+  private _traceability: GlitchKitTraceability = new GlitchKitTraceability();
+  private _metadata: GlitchKitMetadata = new GlitchKitMetadata();
 
   // Properties for error code, timestamp, and duration
   private _errorCode?: number;
@@ -23,6 +23,32 @@ abstract class GlitchKitBaseError extends Error {
 
     Object.setPrototypeOf(this, GlitchKitBaseError.prototype);
     Error.captureStackTrace(this, this.constructor);
+  }
+
+  public get traceability(): GlitchKitTraceability {
+    return this._traceability;
+  }
+
+  public set traceability(trace: GlitchKitTraceability) {
+    this._traceability = trace;
+  }
+
+  public withTraceability(trace: GlitchKitTraceability): this {
+    this._traceability = trace;
+    return this;
+  }
+
+  public get metadata(): GlitchKitMetadata {
+    return this._metadata;
+  }
+
+  public set metadata(meta: GlitchKitMetadata) {
+    this._metadata = meta;
+  }
+
+  public withMetadata(meta: GlitchKitMetadata): this {
+    this._metadata = meta;
+    return this;
   }
 
   public get errorCode(): number | undefined {
