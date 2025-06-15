@@ -1,4 +1,5 @@
 import GlitchKitBaseError from './GlitchKitBaseError';
+import IGlitchKitBaseHttpErrorJson from './interfaces/GlitchKitBaseHttpError.interface';
 
 class GlitchKitBaseHttpError extends GlitchKitBaseError {
   private _statusCode: number;
@@ -70,14 +71,16 @@ class GlitchKitBaseHttpError extends GlitchKitBaseError {
     return this;
   }
 
-  public toJSON(): {} {
-    return {
+  public toJSON(): IGlitchKitBaseHttpErrorJson {
+    const jsonError: IGlitchKitBaseHttpErrorJson = {
       ...super.toJSON(),
       statusCode: this._statusCode,
       url: this._url,
       request: this._request,
       response: this._response,
     };
+
+    return jsonError;
   }
 }
 

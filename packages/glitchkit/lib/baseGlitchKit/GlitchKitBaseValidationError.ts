@@ -1,4 +1,5 @@
 import GlitchKitBaseError from '../baseGlitchKit/GlitchKitBaseError';
+import IGlitchKitBaseValidationErrorJson from './interfaces/GlitchKitBaseValidationError.interface';
 
 class GlitchKitBaseValidationError<T> extends GlitchKitBaseError {
   private _attribute: string | undefined;
@@ -40,12 +41,14 @@ class GlitchKitBaseValidationError<T> extends GlitchKitBaseError {
     return this;
   }
 
-  public toJSON(): Record<string, unknown> {
-    return {
+  public toJSON(): IGlitchKitBaseValidationErrorJson<T> {
+    const jsonError: IGlitchKitBaseValidationErrorJson<T> = {
       ...super.toJSON(),
       attribute: this._attribute,
       attributeValue: this._attributeValue,
     };
+
+    return jsonError;
   }
 }
 

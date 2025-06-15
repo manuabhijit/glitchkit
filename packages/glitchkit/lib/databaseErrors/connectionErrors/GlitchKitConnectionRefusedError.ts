@@ -1,4 +1,4 @@
-import { GlitchKitBaseDatabaseError } from '../../baseGlitchKit/GlitchKitBaseDatabaseError';
+import GlitchKitBaseDatabaseError from '../../baseGlitchKit/GlitchKitBaseDatabaseError';
 
 class GlitchKitConnectionRefusedError extends GlitchKitBaseDatabaseError {
   constructor(message: string, errorCode?: number) {

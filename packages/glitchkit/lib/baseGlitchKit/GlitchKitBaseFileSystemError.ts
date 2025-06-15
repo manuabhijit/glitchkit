@@ -1,4 +1,5 @@
 import GlitchKitBaseError from './GlitchKitBaseError';
+import IGlitchKitBaseFileSystemErrorJson from './interfaces/GlitchKitBaseFileSystemError.interface';
 
 class GlitchKitBaseFileSystemError extends GlitchKitBaseError {
   private _path?: string;
@@ -26,11 +27,13 @@ class GlitchKitBaseFileSystemError extends GlitchKitBaseError {
     return error instanceof GlitchKitBaseFileSystemError;
   }
 
-  public toJSON(): {} {
-    return {
+  public override toJSON(): IGlitchKitBaseFileSystemErrorJson {
+    const jsonError: IGlitchKitBaseFileSystemErrorJson = {
       ...super.toJSON(),
       path: this._path,
     };
+
+    return jsonError;
   }
 }
 

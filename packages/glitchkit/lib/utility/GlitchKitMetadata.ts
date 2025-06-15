@@ -1,9 +1,11 @@
+import IGlitchKitMetadataJson from './interfaces/GlitchKitMetadata.interface';
+
 export class GlitchKitMetadata {
-  private _info?: Object;
-  private _context?: Object;
-  private _tags?: string[];
-  private _category?: string;
-  private _cause?: string;
+  private _info: Object | undefined;
+  private _context: Object | undefined;
+  private _tags: string[] = [];
+  private _category: string | undefined;
+  private _cause: string | undefined;
 
   get info(): Object | undefined {
     return this._info;
@@ -31,11 +33,11 @@ export class GlitchKitMetadata {
     return this;
   }
 
-  get tags(): string[] | undefined {
+  get tags(): string[] {
     return this._tags;
   }
 
-  set tags(tags: string[] | undefined) {
+  set tags(tags: string[]) {
     this._tags = tags;
   }
 
@@ -70,14 +72,16 @@ export class GlitchKitMetadata {
     return this;
   }
 
-  toJson(): object {
-    return {
+  toJson(): IGlitchKitMetadataJson {
+    const glitchkitMetadata: IGlitchKitMetadataJson = {
       info: this._info,
       context: this._context,
       tags: this._tags,
       category: this._category,
       cause: this._cause,
     };
+
+    return glitchkitMetadata;
   }
 }
 
