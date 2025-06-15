@@ -1,3 +1,5 @@
+import IGlitchKitDatabaseJson from './interfaces/GlitchKitDatabase.interface';
+
 class GlitchKitDatabase {
   private _databaseType: string | undefined;
   private _databaseName: string | undefined;
@@ -42,8 +44,8 @@ class GlitchKitDatabase {
     return this;
   }
 
-  toJSON() {
-    const jsonDatabase = {
+  toJSON(): IGlitchKitDatabaseJson {
+    const jsonDatabase: IGlitchKitDatabaseJson = {
       databaseType: this._databaseType,
       databaseName: this._databaseName,
       databaseUrl: this._databaseUrl,

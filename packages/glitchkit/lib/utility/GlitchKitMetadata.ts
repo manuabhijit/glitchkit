@@ -1,9 +1,9 @@
 export class GlitchKitMetadata {
-  private _info?: Object;
-  private _context?: Object;
-  private _tags?: string[];
-  private _category?: string;
-  private _cause?: string;
+  private _info: Object | undefined;
+  private _context: Object | undefined;
+  private _tags: string[] = [];
+  private _category: string | undefined;
+  private _cause: string | undefined;
 
   get info(): Object | undefined {
     return this._info;
@@ -31,11 +31,11 @@ export class GlitchKitMetadata {
     return this;
   }
 
-  get tags(): string[] | undefined {
+  get tags(): string[] {
     return this._tags;
   }
 
-  set tags(tags: string[] | undefined) {
+  set tags(tags: string[]) {
     this._tags = tags;
   }
 
