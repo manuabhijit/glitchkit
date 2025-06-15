@@ -1,23 +1,10 @@
-import GlitchKitBadAllocError from './GlitchKitBadAllocError';
-import GlitchKitBufferOverflowError from './GlitchKitBufferOverflowError';
-import GlitchKitGpuMemoryOverflowError from './GlitchKitGpuMemoryOverflowError';
-import GlitchKitHeapOverflowError from './GlitchKitHeapOverflowError';
-import GlitchKitMemoryQuotaExceededError from './GlitchKitMemoryQuotaExceededError';
-import GlitchKitOOMKilledError from './GlitchKitOOMKilledError';
-import GlitchKitOutOfMemoryError from './GlitchKitOutOfMemoryError';
-import GlitchKitProcessMemoryExceededError from './GlitchKitProcessMemoryExceededError';
-import GlitchKitStackOverflowError from './GlitchKitStackOverflowError';
-import GlitchKitVirtualMemoryExhaustionError from './GlitchKitVirtualMemoryExhaustionError';
-
-export {
-  GlitchKitBadAllocError,
-  GlitchKitBufferOverflowError,
-  GlitchKitGpuMemoryOverflowError,
-  GlitchKitHeapOverflowError,
-  GlitchKitMemoryQuotaExceededError,
-  GlitchKitOOMKilledError,
-  GlitchKitOutOfMemoryError,
-  GlitchKitProcessMemoryExceededError,
-  GlitchKitStackOverflowError,
-  GlitchKitVirtualMemoryExhaustionError,
-};
+export { default as GlitchKitBadAllocError } from './GlitchKitBadAllocError';
+export { default as GlitchKitBufferOverflowError } from './GlitchKitBufferOverflowError';
+export { default as GlitchKitGpuMemoryOverflowError } from './GlitchKitGpuMemoryOverflowError';
+export { default as GlitchKitHeapOverflowError } from './GlitchKitHeapOverflowError';
+export { default as GlitchKitMemoryQuotaExceededError } from './GlitchKitMemoryQuotaExceededError';
+export { default as GlitchKitOOMKilledError } from './GlitchKitOOMKilledError';
+export { default as GlitchKitOutOfMemoryError } from './GlitchKitOutOfMemoryError';
+export { default as GlitchKitProcessMemoryExceededError } from './GlitchKitProcessMemoryExceededError';
+export { default as GlitchKitStackOverflowError } from './GlitchKitStackOverflowError';
+export { default as GlitchKitVirtualMemoryExhaustionError } from './GlitchKitVirtualMemoryExhaustionError';
