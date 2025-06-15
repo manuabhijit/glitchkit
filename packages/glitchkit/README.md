@@ -143,12 +143,12 @@ These errors capture violations of common relational database constraints, makin
 
 These errors deal with issues related to data range, formatting, type enforcement, and truncation — commonly used in database operations, parsers, and form processing.
 
-| Error Class                      | Description                                                              |
-| -------------------------------- | ------------------------------------------------------------------------ |
-| `GlitchKitDataTruncationError`   | Raised when data is truncated (e.g., a string exceeds the column limit). |
-| `GlitchKitInvalidEnumValueError` | Raised when a value does not match any valid enum option.                |
-| `GlitchKitOverflowError`         | Raised when a value exceeds the maximum allowed size or range.           |
-| `GlitchKitUnderflowError`        | Raised when a value is smaller than the minimum allowed threshold.       |
+| Error Class               | Description                                                              |
+| ------------------------- | ------------------------------------------------------------------------ |
+| `GkDataTruncationError`   | Raised when data is truncated (e.g., a string exceeds the column limit). |
+| `GkInvalidEnumValueError` | Raised when a value does not match any valid enum option.                |
+| `GkOverflowError`         | Raised when a value exceeds the maximum allowed size or range.           |
+| `GkUnderflowError`        | Raised when a value is smaller than the minimum allowed threshold.       |
 
 ### ⚙️ ORM & Migration Errors
 
