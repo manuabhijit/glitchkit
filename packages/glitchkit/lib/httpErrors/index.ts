@@ -40,3 +40,47 @@ export { default as GlitchKitNotExtendedHttpError } from './GlitchKitNotExtended
 export { default as GlitchKitNotImplementedHttpError } from './GlitchKitNotImplementedHttpError'; // 501
 export { default as GlitchKitServiceUnavailableHttpError } from './GlitchKitServiceUnavailableHttpError'; // 503
 export { default as GlitchKitVariantAlsoNegotiatesHttpError } from './GlitchKitVariantAlsoNegotiatesHttpError'; // 506
+
+// Alternate exports with Gk prefix
+export { default as GkBadRequestHttpError } from './GlitchKitBadRequestHttpError';
+export { default as GkConflictHttpError } from './GlitchKitConflictHttpError';
+export { default as GkExpectationFailedHttpError } from './GlitchKitExpectationFailedHttpError';
+export { default as GkFailedDependencyHttpError } from './GlitchKitFailedDependencyHttpError';
+export { default as GkForbiddenHttpError } from './GlitchKitForbiddenHttpError';
+export { default as GkGoneHttpError } from './GlitchKitGoneHttpError';
+export { default as GkImATeapotHttpError } from './GlitchKitImATeapotHttpError';
+export { default as GkLengthRequiredHttpError } from './GlitchKitLengthRequiredHttpError';
+export { default as GkLockedHttpError } from './GlitchKitLockedHttpError';
+export { default as GkMethodNotAllowedHttpError } from './GlitchKitMethodNotAllowedHttpError';
+export { default as GkMisdirectedRequestHttpError } from './GlitchKitMisdirectedRequestHttpError';
+export { default as GkNotAcceptableHttpError } from './GlitchKitNotAcceptableHttpError';
+export { default as GkNotFoundHttpError } from './GlitchKitNotFoundHttpError';
+export { default as GkPayloadTooLargeHttpError } from './GlitchKitPayloadTooLargeHttpError';
+export { default as GkPaymentRequiredHttpError } from './GlitchKitPaymentRequiredHttpError';
+export { default as GkPreconditionFailedHttpError } from './GlitchKitPreconditionFailedHttpError';
+export { default as GkPreconditionRequiredHttpError } from './GlitchKitPreconditionRequiredHttpError';
+export { default as GkProxyAuthenticationRequiredHttpError } from './GlitchKitProxyAuthenticationRequiredHttpError';
+export { default as GkRangeNotSatisfiableHttpError } from './GlitchKitRangeNotSatisfiableHttpError';
+export { default as GkRequestHeaderFieldsTooLargeHttpError } from './GlitchKitRequestHeaderFieldsTooLargeHttpError';
+export { default as GkRequestTimeoutHttpError } from './GlitchKitRequestTimeoutHttpError';
+export { default as GkTooEarlyHttpError } from './GlitchKitTooEarlyHttpError';
+export { default as GkTooManyRequestsHttpError } from './GlitchKitTooManyRequestsHttpError';
+export { default as GkUnauthorizedHttpError } from './GlitchKitUnauthorizedHttpError';
+export { default as GkUnavailableForLegalReasonsHttpError } from './GlitchKitUnavailableForLegalReasonsHttpError';
+export { default as GkUnprocessableEntityHttpError } from './GlitchKitUnprocessableEntityHttpError';
+export { default as GkUnsupportedMediaTypeHttpError } from './GlitchKitUnsupportedMediaTypeHttpError';
+export { default as GkUpgradeRequiredHttpError } from './GlitchKitUpgradeRequiredHttpError';
+export { default as GkUriTooLongHttpError } from './GlitchKitUriTooLongHttpError';
+
+// 5xx Server Errors
+export { default as GkBadGatewayHttpError } from './GlitchKitBadGatewayHttpError';
+export { default as GkGatewayTimeoutHttpError } from './GlitchKitGatewayTimeoutHttpError';
+export { default as GkHttpVersionNotSupportedHttpError } from './GlitchKitHttpVersionNotSupportedHttpError';
+export { default as GkInsufficientStorageHttpError } from './GlitchKitInsufficientStorageHttpError';
+export { default as GkInternalServerErrorHttpError } from './GlitchKitInternalServerErrorHttpError';
+export { default as GkLoopDetectedHttpError } from './GlitchKitLoopDetectedHttpError';
+export { default as GkNetworkAuthenticationRequiredHttpError } from './GlitchKitNetworkAuthenticationRequiredHttpError';
+export { default as GkNotExtendedHttpError } from './GlitchKitNotExtendedHttpError';
+export { default as GkNotImplementedHttpError } from './GlitchKitNotImplementedHttpError';
+export { default as GkServiceUnavailableHttpError } from './GlitchKitServiceUnavailableHttpError';
+export { default as GkVariantAlsoNegotiatesHttpError } from './GlitchKitVariantAlsoNegotiatesHttpError';
