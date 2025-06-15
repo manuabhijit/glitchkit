@@ -41,6 +41,16 @@ class GlitchKitDatabase {
     this._databaseUrl = databaseUrl;
     return this;
   }
+
+  toJSON() {
+    const jsonDatabase = {
+      databaseType: this._databaseType,
+      databaseName: this._databaseName,
+      databaseUrl: this._databaseUrl,
+    };
+
+    return jsonDatabase;
+  }
 }
 
 export default GlitchKitDatabase;

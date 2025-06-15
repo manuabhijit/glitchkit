@@ -26,7 +26,7 @@ class GlitchKitBaseFileSystemError extends GlitchKitBaseError {
     return error instanceof GlitchKitBaseFileSystemError;
   }
 
-  public toJSON(): {} {
+  public override toJSON() {
     return {
       ...super.toJSON(),
       path: this._path,

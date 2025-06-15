@@ -70,7 +70,7 @@ class GlitchKitBaseHttpError extends GlitchKitBaseError {
     return this;
   }
 
-  public toJSON(): {} {
+  public toJSON() {
     return {
       ...super.toJSON(),
       statusCode: this._statusCode,

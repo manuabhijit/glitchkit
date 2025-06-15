@@ -21,6 +21,15 @@ abstract class GlitchKitBaseDatabaseError extends GlitchKitBaseError {
     this._database = database;
     return this;
   }
+
+  public toJSON() {
+    const jsonError = {
+      ...super.toJSON(),
+      database: this._database.toJSON(),
+    };
+
+    return jsonError;
+  }
 }
 
 export default GlitchKitBaseDatabaseError;

@@ -40,7 +40,7 @@ class GlitchKitBaseValidationError<T> extends GlitchKitBaseError {
     return this;
   }
 
-  public toJSON(): Record<string, unknown> {
+  public toJSON() {
     return {
       ...super.toJSON(),
       attribute: this._attribute,
