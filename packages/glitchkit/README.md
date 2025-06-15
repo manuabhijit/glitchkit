@@ -18,54 +18,28 @@ npm install glitchkit
 
 ## Usage
 
-```javascript
-import { GlitchKitFileNotFoundError } from 'glitchkit';
-
-try {
-  throw new GlitchKitFileNotFoundError('File missing', 404, '/path/to/file');
-} catch (err) {
-  if (GlitchKitFileNotFoundError.isInstance(err)) {
-    console.error('File not found:', err.path);
-  }
-}
-```
-
-## Http Errors
-
-GlitchKit HTTP Errors provide a fluent API to build rich, structured errors with metadata and traceability — ideal for microservices, observability platforms, and audit systems.
-
 #### Import the specific HTTP error class
 
 ```javascript
-import { GkNotFoundHttpError } from 'glitchkit';
+import { GkBusinessLogicError } from 'glitchkit';
 ```
 
 #### Instantiate the error with a meaningful message
 
 ```javascript
-const notFoundError = new GkNotFoundHttpError('Record not found');
+const gkError = new GkBusinessLogicError('Logical Error');
 ```
 
 #### Optionally, assign a custom application error code
 
 ```javascript
-// Optional: Add request and response details
-notFoundError.withErrorCode(1001);
-```
-
-#### Add request and response payloads for debugging or audit trails
-
-```javascript
-// Optional: Add request and response details
-notFoundError.withRequest({ recordId: '12345' });
-notFoundError.withResponse({ message: 'Requested record was not found.' });
+gkError.withErrorCode(1001);
 ```
 
 #### Enrich the error with structured metadata (category, context, tags, cause)
 
 ```javascript
-// Optional: Add structured metadata
-notFoundError.metadata
+gkError.metadata
   .withCategory('database') // Optional category
   .withInfo({ recordId: '12345', operation: 'fetch' }) // Optional metadata info
   .withContext({ context: 'Database query for record' }) // Optional metadata context
@@ -76,9 +50,7 @@ notFoundError.metadata
 #### Add traceability information for better monitoring and observability
 
 ```javascript
-// Optional: Add traceability details for observability
-
-notFoundError.traceability
+gkError.traceability
   .withOperation('fetchRecord') // Optional operation name
   .withTraceId('trace-12345') // Optional trace ID
   .withReported(true) // Optional reported status
@@ -88,11 +60,26 @@ notFoundError.traceability
 #### Serialize the error or check its type before throwing/logging
 
 ```javascript
-// Convert to JSON for structured logging or API response
-console.log(notFoundError.toJSON());
+console.log(gkError.toJSON());
+console.log(GkNotFoundHttpError.isInstance(gkError));
+```
 
-// Type checking
-console.log(GkNotFoundHttpError.isInstance(notFoundError));
+## Http Errors
+
+GlitchKit HTTP Errors provide a fluent API to build rich, structured errors with metadata and traceability — ideal for microservices, observability platforms, and audit systems.
+
+#### Import the specific HTTP error class and instantiate with a meaningful message
+
+```javascript
+import { GkNotFoundHttpError } from 'glitchkit';
+const notFoundError = new GkNotFoundHttpError('Record not found');
+```
+
+#### Add request and response payloads for debugging or audit trails
+
+```javascript
+notFoundError.withRequest({ recordId: '12345' });
+notFoundError.withResponse({ message: 'Requested record was not found.' });
 ```
 
 ### 🔄 4xx — Client Errors
@@ -103,17 +90,16 @@ console.log(GkNotFoundHttpError.isInstance(notFoundError));
 | 401       | `GkUnauthorizedHttpError`    | Authentication is required and has failed or has not been provided. |
 | 402       | `GkPaymentRequiredHttpError` | Reserved for future use (e.g., digital payment systems).            |
 | 403       | `GkForbiddenHttpError`       | Client does not have access rights to the content.                  |
-| 404       | `GkNotFoundHttpError`        | The server cannot find the requested resource.                      |
 
 This include all other 4xx errors.
 
 ### 🛠️ 5xx — Server Errors
 
-| HTTP Code | Error Class                      | Description                                                      |
-| --------- | -------------------------------- | ---------------------------------------------------------------- |
-| 500       | `GkInternalServerErrorHttpError` | The server encountered an unexpected condition.                  |
-| 501       | `GkNotImplementedHttpError`      | The server does not support the functionality required.          |
-| 502       | `GkBadGatewayHttpError`          | The server received an invalid response from an upstream server. |
-| 503       | `GkServiceUnavailableHttpError`  | The server is currently unavailable.                             |
+| HTTP Code | Error Class                      | Description                                                  |
+| --------- | -------------------------------- | ------------------------------------------------------------ |
+| 500       | `GkInternalServerErrorHttpError` | Server encountered an unexpected condition.                  |
+| 501       | `GkNotImplementedHttpError`      | Server does not support the functionality required.          |
+| 502       | `GkBadGatewayHttpError`          | Server received an invalid response from an upstream server. |
+| 503       | `GkServiceUnavailableHttpError`  | Server is currently unavailable.                             |
 
 This include all other 4xx errors.
