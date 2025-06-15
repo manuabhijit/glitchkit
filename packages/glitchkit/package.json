@@ -3,7 +3,34 @@
   "version": "0.1.4",
   "description": "A lightweight toolkit to create and manage expressive, structured, and reusable error types. Perfect for APIs, services, and glitchy adventures",
   "keywords": [
-    "glitchkit"
+    "glitchkit",
+    "typescript",
+    "nodejs",
+    "errors",
+    "error-handling",
+    "custom-errors",
+    "structured-errors",
+    "http-errors",
+    "validation-errors",
+    "api-errors",
+    "exception",
+    "exception-handling",
+    "logging",
+    "observability",
+    "error-logging",
+    "error-monitoring",
+    "traceability",
+    "stacktrace",
+    "metadata",
+    "debugging",
+    "reusable-errors",
+    "domain-errors",
+    "application-errors",
+    "business-errors",
+    "server-errors",
+    "client-errors",
+    "monorepo",
+    "lerna"
   ],
   "author": "“Abhijit <“manuabhijit@gmail.com”>",
   "homepage": "https://github.com/manuabhijit/glitchkit#readme",
@@ -28,9 +55,7 @@
   "bugs": {
     "url": "https://github.com/manuabhijit/glitchkit/issues"
   },
-  "dependencies": {
-    "ts-mixer": "^6.0.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^30.0.0",
