@@ -1,4 +1,4 @@
-import { GlitchKitBaseDatabaseError } from '../../baseGlitchKit/GlitchKitBaseDatabaseError';
+import GlitchKitBaseDatabaseError from '../../baseGlitchKit/GlitchKitBaseDatabaseError';
 
 class GlitchKitDriverError extends GlitchKitBaseDatabaseError {
   constructor(message: string, errorCode?: number) {

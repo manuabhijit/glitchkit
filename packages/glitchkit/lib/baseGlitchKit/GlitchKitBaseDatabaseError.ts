@@ -1,7 +1,7 @@
 import GlitchKitDatabase from '../utility/GlitchKitDatabase';
 import GlitchKitBaseError from './GlitchKitBaseError';
 
-export class GlitchKitBaseDatabaseError extends GlitchKitBaseError {
+abstract class GlitchKitBaseDatabaseError extends GlitchKitBaseError {
   private _database: GlitchKitDatabase = new GlitchKitDatabase();
 
   constructor(message: string, errorCode?: number) {
@@ -22,3 +22,5 @@ export class GlitchKitBaseDatabaseError extends GlitchKitBaseError {
     return this;
   }
 }
+
+export default GlitchKitBaseDatabaseError;
