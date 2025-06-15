@@ -7,7 +7,7 @@ class GlitchKitNetworkAuthenticationRequiredHttpError extends GlitchKitBaseHttpE
     Object.setPrototypeOf(this, GlitchKitNetworkAuthenticationRequiredHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitNetworkAuthenticationRequiredHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitNetworkAuthenticationRequiredHttpError;
   }
 }

@@ -7,7 +7,7 @@ class GlitchKitTooEarlyHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitTooEarlyHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitTooEarlyHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitTooEarlyHttpError;
   }
 }

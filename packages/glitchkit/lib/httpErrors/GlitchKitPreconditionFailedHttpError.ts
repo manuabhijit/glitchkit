@@ -7,7 +7,7 @@ class GlitchKitPreconditionFailedHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitPreconditionFailedHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitPreconditionFailedHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitPreconditionFailedHttpError;
   }
 }

@@ -7,7 +7,7 @@ class GlitchKitRequestHeaderFieldsTooLargeHttpError extends GlitchKitBaseHttpErr
     Object.setPrototypeOf(this, GlitchKitRequestHeaderFieldsTooLargeHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitRequestHeaderFieldsTooLargeHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitRequestHeaderFieldsTooLargeHttpError;
   }
 }

@@ -7,7 +7,7 @@ class GlitchKitRequestTimeoutHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitRequestTimeoutHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitRequestTimeoutHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitRequestTimeoutHttpError;
   }
 }

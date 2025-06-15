@@ -7,7 +7,7 @@ class GlitchKitRangeNotSatisfiableHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitRangeNotSatisfiableHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitRangeNotSatisfiableHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitRangeNotSatisfiableHttpError;
   }
 }

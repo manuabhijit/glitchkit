@@ -7,7 +7,7 @@ class GlitchKitVariantAlsoNegotiatesHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitVariantAlsoNegotiatesHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitVariantAlsoNegotiatesHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitVariantAlsoNegotiatesHttpError;
   }
 }

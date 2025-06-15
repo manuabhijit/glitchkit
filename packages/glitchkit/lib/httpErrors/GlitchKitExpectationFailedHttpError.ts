@@ -7,7 +7,8 @@ class GlitchKitExpectationFailedHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitExpectationFailedHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitExpectationFailedHttpError {
+
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitExpectationFailedHttpError;
   }
 }

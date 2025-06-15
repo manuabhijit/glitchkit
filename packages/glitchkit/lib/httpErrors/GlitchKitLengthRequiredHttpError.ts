@@ -7,7 +7,7 @@ class GlitchKitLengthRequiredHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitLengthRequiredHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitLengthRequiredHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitLengthRequiredHttpError;
   }
 }

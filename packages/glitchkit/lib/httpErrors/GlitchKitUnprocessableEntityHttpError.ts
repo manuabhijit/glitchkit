@@ -7,7 +7,7 @@ class GlitchKitUnprocessableEntityHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitUnprocessableEntityHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitUnprocessableEntityHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitUnprocessableEntityHttpError;
   }
 }

@@ -9,7 +9,7 @@ class GlitchKitNotFoundHttpError extends GlitchKitBaseHttpError {
     Error.captureStackTrace(this, this.constructor);
   }
 
-  isInstance(error: unknown): error is GlitchKitNotFoundHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitNotFoundHttpError;
   }
 }

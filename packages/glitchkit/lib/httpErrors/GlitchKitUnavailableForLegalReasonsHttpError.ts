@@ -7,7 +7,7 @@ class GlitchKitUnavailableForLegalReasonsHttpError extends GlitchKitBaseHttpErro
     Object.setPrototypeOf(this, GlitchKitUnavailableForLegalReasonsHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitUnavailableForLegalReasonsHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitUnavailableForLegalReasonsHttpError;
   }
 }

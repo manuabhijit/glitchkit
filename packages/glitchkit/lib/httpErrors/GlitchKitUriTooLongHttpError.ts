@@ -7,7 +7,7 @@ class GlitchKitUriTooLongHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitUriTooLongHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitUriTooLongHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitUriTooLongHttpError;
   }
 }

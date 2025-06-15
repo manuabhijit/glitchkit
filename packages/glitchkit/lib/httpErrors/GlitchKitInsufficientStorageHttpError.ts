@@ -7,7 +7,7 @@ class GlitchKitInsufficientStorageHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitInsufficientStorageHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitInsufficientStorageHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitInsufficientStorageHttpError;
   }
 }

@@ -49,7 +49,7 @@ class GlitchKitBaseError extends Error {
     return this;
   }
 
-  public static isInstance(error: unknown): error is GlitchKitBaseError {
+  public static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitBaseError;
   }
 

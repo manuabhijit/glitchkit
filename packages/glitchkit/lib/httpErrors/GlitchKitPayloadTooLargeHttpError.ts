@@ -7,7 +7,7 @@ class GlitchKitPayloadTooLargeHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitPayloadTooLargeHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitPayloadTooLargeHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitPayloadTooLargeHttpError;
   }
 }

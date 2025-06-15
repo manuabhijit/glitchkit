@@ -9,7 +9,7 @@ class GlitchKitInternalServerHttpError extends GlitchKitBaseHttpError {
     Error.captureStackTrace(this, this.constructor);
   }
 
-  static isInstance(error: unknown): error is GlitchKitInternalServerHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitInternalServerHttpError;
   }
 }

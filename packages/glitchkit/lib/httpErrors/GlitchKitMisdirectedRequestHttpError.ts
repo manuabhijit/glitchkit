@@ -7,7 +7,7 @@ class GlitchKitMisdirectedRequestHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitMisdirectedRequestHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitMisdirectedRequestHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitMisdirectedRequestHttpError;
   }
 }

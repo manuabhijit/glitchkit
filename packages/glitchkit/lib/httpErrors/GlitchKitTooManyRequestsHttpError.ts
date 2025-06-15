@@ -7,7 +7,7 @@ class GlitchKitTooManyRequestsHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitTooManyRequestsHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
-  static isInstance(error: unknown): error is GlitchKitTooManyRequestsHttpError {
+  static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitTooManyRequestsHttpError;
   }
 }

@@ -13,7 +13,7 @@ class GlitchKitBaseHttpError extends GlitchKitBaseError {
     Error.captureStackTrace(this, this.constructor);
   }
 
-  public static isInstance(error: unknown): error is GlitchKitBaseHttpError {
+  public static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitBaseHttpError;
   }
 
