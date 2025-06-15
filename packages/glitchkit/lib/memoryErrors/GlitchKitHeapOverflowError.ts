@@ -1,7 +1,7 @@
 import GlitchKitBaseError from '../baseGlitchKit/GlitchKitBaseError';
 
 class GlitchKitHeapOverflowError extends GlitchKitBaseError {
-  constructor(message: string = 'Heap overflow', errorCode?: number) {
+  constructor(message: string, errorCode?: number) {
     super(message, errorCode);
     Object.setPrototypeOf(this, GlitchKitHeapOverflowError.prototype);
     Error.captureStackTrace(this, this.constructor);

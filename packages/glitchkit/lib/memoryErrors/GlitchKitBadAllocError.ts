@@ -1,7 +1,7 @@
 import GlitchKitBaseError from '../baseGlitchKit/GlitchKitBaseError';
 
 class GlitchKitBadAllocError extends GlitchKitBaseError {
-  constructor(message: string = 'Bad memory allocation', errorCode?: number) {
+  constructor(message: string, errorCode?: number) {
     super(message, errorCode);
     Object.setPrototypeOf(this, GlitchKitBadAllocError.prototype);
     Error.captureStackTrace(this, this.constructor);

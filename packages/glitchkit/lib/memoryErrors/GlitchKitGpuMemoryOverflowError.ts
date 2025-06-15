@@ -1,7 +1,7 @@
 import GlitchKitBaseError from '../baseGlitchKit/GlitchKitBaseError';
 
 class GlitchKitGpuMemoryOverflowError extends GlitchKitBaseError {
-  constructor(message: string = 'GPU memory overflow', errorCode?: number) {
+  constructor(message: string, errorCode?: number) {
     super(message, errorCode);
     Object.setPrototypeOf(this, GlitchKitGpuMemoryOverflowError.prototype);
     Error.captureStackTrace(this, this.constructor);

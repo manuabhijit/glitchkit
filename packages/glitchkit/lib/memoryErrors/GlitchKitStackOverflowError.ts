@@ -1,7 +1,7 @@
 import GlitchKitBaseError from '../baseGlitchKit/GlitchKitBaseError';
 
 class GlitchKitStackOverflowError extends GlitchKitBaseError {
-  constructor(message: string = 'Stack overflow', errorCode?: number) {
+  constructor(message: string, errorCode?: number) {
     super(message, errorCode);
     Object.setPrototypeOf(this, GlitchKitStackOverflowError.prototype);
     Error.captureStackTrace(this, this.constructor);

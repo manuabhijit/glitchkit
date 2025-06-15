@@ -1,7 +1,7 @@
 import GlitchKitBaseError from '../baseGlitchKit/GlitchKitBaseError';
 
 class GlitchKitMemoryQuotaExceededError extends GlitchKitBaseError {
-  constructor(message: string = 'Memory quota exceeded', errorCode?: number) {
+  constructor(message: string, errorCode?: number) {
     super(message, errorCode);
     Object.setPrototypeOf(this, GlitchKitMemoryQuotaExceededError.prototype);
     Error.captureStackTrace(this, this.constructor);

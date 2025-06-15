@@ -1,7 +1,7 @@
 import GlitchKitBaseError from '../baseGlitchKit/GlitchKitBaseError';
 
 class GlitchKitProcessMemoryExceededError extends GlitchKitBaseError {
-  constructor(message: string = 'Process memory exceeded', errorCode?: number) {
+  constructor(message: string, errorCode?: number) {
     super(message, errorCode);
     Object.setPrototypeOf(this, GlitchKitProcessMemoryExceededError.prototype);
     Error.captureStackTrace(this, this.constructor);
