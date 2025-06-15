@@ -1,0 +1,39 @@
+{
+  "name": "glitchkit",
+  "version": "0.0.1",
+  "description": "A lightweight toolkit to create and manage expressive, structured, and reusable error types. Perfect for APIs, services, and glitchy adventures",
+  "keywords": [
+    "glitchkit"
+  ],
+  "author": "“Abhijit <“manuabhijit@gmail.com”>",
+  "homepage": "https://github.com/manuabhijit/glitchkit#readme",
+  "license": "MIT",
+  "main": "dist/glitchkit.js",
+  "types": "dist/glitchkit.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuabhijit/glitchkit.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && jest"
+  },
+  "bugs": {
+    "url": "https://github.com/manuabhijit/glitchkit/issues"
+  },
+  "dependencies": {
+    "ts-mixer": "^6.0.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^30.0.0",
+    "typescript": "^5.8.3"
+  }
+}
