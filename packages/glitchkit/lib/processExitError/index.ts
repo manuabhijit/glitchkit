@@ -11,3 +11,18 @@ export { default as GlitchKitTimeoutExitError } from './GlitchKitTimeoutExitErro
 export { default as GlitchKitUnexpectedSuccessExitError } from './GlitchKitUnexpectedSuccessExitError';
 export { default as GlitchKitUnhandledExceptionExitError } from './GlitchKitUnhandledExceptionExitError';
 export { default as GlitchKitZombieProcessCleanupError } from './GlitchKitZombieProcessCleanupError';
+
+// Alternate
+export { default as GkCrashLoopError } from './GlitchKitCrashLoopError';
+export { default as GkDependencyFailureExitError } from './GlitchKitDependencyFailureExitError';
+export { default as GkGeneralProcessError } from './GlitchKitGeneralProcessError';
+export { default as GkOOMKilledProcessError } from './GlitchKitOOMKilledProcessError';
+export { default as GkSegmentationFaultError } from './GlitchKitSegmentationFaultError';
+export { default as GkSigintProcessError } from './GlitchKitSigintProcessError';
+export { default as GkSigkillProcessError } from './GlitchKitSigkillProcessError';
+export { default as GkSigtermProcessError } from './GlitchKitSigtermProcessError';
+export { default as GkSystemShutdownExitError } from './GlitchKitSystemShutdownExitError';
+export { default as GkTimeoutExitError } from './GlitchKitTimeoutExitError';
+export { default as GkUnexpectedSuccessExitError } from './GlitchKitUnexpectedSuccessExitError';
+export { default as GkUnhandledExceptionExitError } from './GlitchKitUnhandledExceptionExitError';
+export { default as GkZombieProcessCleanupError } from './GlitchKitZombieProcessCleanupError';
