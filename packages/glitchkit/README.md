@@ -106,6 +106,22 @@ This include all other 5xx errors.
 
 ## Database
 
+Initialize `GlitchKitDatabase` object
+
+```javascript
+const glitchKitDatabase: GlitchKitDatabase = new GlitchKitDatabase();
+glitchKitDatabase.databaseName = DUMMY_DATABASE_NAME;
+glitchKitDatabase.databaseUrl = DUMMY_DATABASE_URL;
+glitchKitDatabase.databaseType = DUMMY_DATABASE_TYPE;
+```
+
+Attach it to `errorInstance` for enhanced traceability
+
+```javascript
+const errorInstance = new GlitchKitForeignKeyViolationError(DUMMY_ERROR_MESSAGE, DUMMY_ERROR_CODE);
+errorInstance.withDatabase(glitchKitDatabase);
+```
+
 ### 📊 Cloud Service Errors
 
 These errors handle conditions related to system or subscription limits, as well as issues in data replication — useful for SaaS platforms and distributed systems.
