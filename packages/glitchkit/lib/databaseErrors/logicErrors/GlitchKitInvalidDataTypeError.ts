@@ -12,4 +12,4 @@ class GlitchKitInvalidDataTypeError extends GlitchKitBaseDatabaseError {
   }
 }
 
-export { GlitchKitInvalidDataTypeError };
+export default GlitchKitInvalidDataTypeError;
