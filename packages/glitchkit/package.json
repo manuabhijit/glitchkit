@@ -1,6 +1,6 @@
 {
   "name": "glitchkit",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A lightweight toolkit to create and manage expressive, structured, and reusable error types. Perfect for APIs, services, and glitchy adventures",
   "keywords": [
     "glitchkit",
@@ -55,7 +55,6 @@
   "bugs": {
     "url": "https://github.com/manuabhijit/glitchkit/issues"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^30.0.0",
