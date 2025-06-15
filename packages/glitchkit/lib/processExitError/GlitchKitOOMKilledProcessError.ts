@@ -6,6 +6,7 @@ class GlitchKitOOMKilledProcessError extends GlitchKitBaseError {
     Object.setPrototypeOf(this, GlitchKitOOMKilledProcessError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitOOMKilledProcessError;
   }

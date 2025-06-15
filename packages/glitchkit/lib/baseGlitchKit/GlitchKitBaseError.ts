@@ -11,7 +11,6 @@ class GlitchKitBaseError extends Error {
 
   constructor(message: string, errorCode?: number) {
     super(message);
-    this.name = 'GlitchKitError';
     this._errorCode = errorCode;
     this._timestamp = new Date();
 

@@ -5,7 +5,6 @@ class GlitchKitSchemaValidationError extends GlitchKitBaseValidationError<object
 
   constructor(message: string, errorCode?: number) {
     super(message, errorCode);
-    this.name = 'GlitchKitSchemaValidationError';
     Object.setPrototypeOf(this, GlitchKitSchemaValidationError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }

@@ -6,6 +6,7 @@ class GlitchKitDependencyFailureExitError extends GlitchKitBaseError {
     Object.setPrototypeOf(this, GlitchKitDependencyFailureExitError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitDependencyFailureExitError;
   }

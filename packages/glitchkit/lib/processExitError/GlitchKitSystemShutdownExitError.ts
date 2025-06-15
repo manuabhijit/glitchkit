@@ -6,6 +6,7 @@ class GlitchKitSystemShutdownExitError extends GlitchKitBaseError {
     Object.setPrototypeOf(this, GlitchKitSystemShutdownExitError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitSystemShutdownExitError;
   }

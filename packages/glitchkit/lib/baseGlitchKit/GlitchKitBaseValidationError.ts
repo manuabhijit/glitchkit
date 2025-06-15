@@ -4,11 +4,8 @@ class GlitchKitBaseValidationError<T> extends GlitchKitBaseError {
   private _attribute: string | undefined;
   private _attributeValue: T | undefined;
 
-  constructor(message: string, errorCode?: number, attribute?: string, attributeValue?: T) {
+  constructor(message: string, errorCode?: number) {
     super(message, errorCode);
-    this.name = 'GlitchKitBaseValidationError';
-    this._attribute = attribute;
-    this._attributeValue = attributeValue;
     Object.setPrototypeOf(this, GlitchKitBaseValidationError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
@@ -41,6 +38,14 @@ class GlitchKitBaseValidationError<T> extends GlitchKitBaseError {
   public withAttributeValue(value: T): this {
     this._attributeValue = value;
     return this;
+  }
+
+  public toJSON(): Record<string, unknown> {
+    return {
+      ...super.toJSON(),
+      attribute: this._attribute,
+      attributeValue: this._attributeValue,
+    };
   }
 }
 

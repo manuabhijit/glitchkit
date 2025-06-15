@@ -6,6 +6,7 @@ class GlitchKitUnexpectedSuccessExitError extends GlitchKitBaseError {
     Object.setPrototypeOf(this, GlitchKitUnexpectedSuccessExitError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitUnexpectedSuccessExitError;
   }

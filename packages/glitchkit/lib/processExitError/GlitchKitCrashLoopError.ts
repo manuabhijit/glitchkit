@@ -6,6 +6,7 @@ class GlitchKitCrashLoopError extends GlitchKitBaseError {
     Object.setPrototypeOf(this, GlitchKitCrashLoopError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitCrashLoopError;
   }

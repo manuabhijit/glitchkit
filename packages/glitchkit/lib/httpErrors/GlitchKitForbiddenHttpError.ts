@@ -3,8 +3,6 @@ import GlitchKitBaseHttpError from '../baseGlitchKit/GlitchKitBaseHttpError';
 class GlitchKitForbiddenHttpError extends GlitchKitBaseHttpError {
   constructor(message: string, errorCode?: number) {
     super(message, 403, errorCode);
-    this.name = 'GlitchKitForbiddenHttpError';
-
     Object.setPrototypeOf(this, GlitchKitForbiddenHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }

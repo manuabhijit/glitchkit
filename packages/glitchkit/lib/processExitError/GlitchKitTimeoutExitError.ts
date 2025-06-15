@@ -6,6 +6,7 @@ class GlitchKitTimeoutExitError extends GlitchKitBaseError {
     Object.setPrototypeOf(this, GlitchKitTimeoutExitError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitTimeoutExitError;
   }

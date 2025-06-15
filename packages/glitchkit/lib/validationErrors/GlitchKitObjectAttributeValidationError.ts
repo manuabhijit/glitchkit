@@ -3,7 +3,6 @@ import GlitchKitBaseValidationError from '../baseGlitchKit/GlitchKitBaseValidati
 class GlitchKitObjectAttributeValidationError extends GlitchKitBaseValidationError<Object> {
   constructor(message: string, errorCode?: number) {
     super(message, errorCode);
-    this.name = 'GlitchKitObjectAttributeValidationError';
     Object.setPrototypeOf(this, GlitchKitObjectAttributeValidationError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }

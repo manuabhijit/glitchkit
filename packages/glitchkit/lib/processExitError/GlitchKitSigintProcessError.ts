@@ -6,6 +6,7 @@ class GlitchKitSigintProcessError extends GlitchKitBaseError {
     Object.setPrototypeOf(this, GlitchKitSigintProcessError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitSigintProcessError;
   }

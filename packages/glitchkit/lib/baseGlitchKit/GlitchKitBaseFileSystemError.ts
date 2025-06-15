@@ -25,6 +25,13 @@ class GlitchKitBaseFileSystemError extends GlitchKitBaseError {
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitBaseFileSystemError;
   }
+
+  public toJSON(): {} {
+    return {
+      ...super.toJSON(),
+      path: this._path,
+    };
+  }
 }
 
 export default GlitchKitBaseFileSystemError;
