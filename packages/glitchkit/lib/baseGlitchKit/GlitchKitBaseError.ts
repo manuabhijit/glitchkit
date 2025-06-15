@@ -1,5 +1,6 @@
 import GlitchKitMetadata from '../utility/GlitchKitMetadata';
 import GlitchKitTraceability from '../utility/GlitchKitTraceability';
+import IGlitchKitBaseErrorJson from './interfaces/GlitchKitBaseError.interface';
 
 abstract class GlitchKitBaseError extends Error {
   public traceability = new GlitchKitTraceability();
@@ -52,8 +53,8 @@ abstract class GlitchKitBaseError extends Error {
     return error instanceof GlitchKitBaseError;
   }
 
-  public toJSON() {
-    const jsonError = {
+  public toJSON(): IGlitchKitBaseErrorJson {
+    const jsonError: IGlitchKitBaseErrorJson = {
       name: this.name,
       message: this.message,
       errorCode: this._errorCode,

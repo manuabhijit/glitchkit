@@ -1,3 +1,5 @@
+import IGlitchKitMetadataJson from './interfaces/GlitchKitMetadata.interface';
+
 export class GlitchKitMetadata {
   private _info: Object | undefined;
   private _context: Object | undefined;
@@ -70,14 +72,16 @@ export class GlitchKitMetadata {
     return this;
   }
 
-  toJson(): object {
-    return {
+  toJson(): IGlitchKitMetadataJson {
+    const glitchkitMetadata: IGlitchKitMetadataJson = {
       info: this._info,
       context: this._context,
       tags: this._tags,
       category: this._category,
       cause: this._cause,
     };
+
+    return glitchkitMetadata;
   }
 }
 
