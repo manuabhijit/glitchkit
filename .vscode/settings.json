@@ -8,5 +8,7 @@
   },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "jest.jestCommandLine": "npx jest",
+  "jest.enable": false
 }

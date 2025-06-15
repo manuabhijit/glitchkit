@@ -34,6 +34,7 @@ export { default as GlitchKitGatewayTimeoutHttpError } from './GlitchKitGatewayT
 export { default as GlitchKitHttpVersionNotSupportedHttpError } from './GlitchKitHttpVersionNotSupportedHttpError'; // 505
 export { default as GlitchKitInsufficientStorageHttpError } from './GlitchKitInsufficientStorageHttpError'; // 507
 export { default as GlitchKitInternalServerErrorHttpError } from './GlitchKitInternalServerErrorHttpError'; // 500
+export { default as GlitchKitInternalServerHttpError } from './GlitchKitInternalServerHttpError'; // 500
 export { default as GlitchKitLoopDetectedHttpError } from './GlitchKitLoopDetectedHttpError'; // 508
 export { default as GlitchKitNetworkAuthenticationRequiredHttpError } from './GlitchKitNetworkAuthenticationRequiredHttpError'; // 511
 export { default as GlitchKitNotExtendedHttpError } from './GlitchKitNotExtendedHttpError'; // 510
@@ -78,6 +79,7 @@ export { default as GkGatewayTimeoutHttpError } from './GlitchKitGatewayTimeoutH
 export { default as GkHttpVersionNotSupportedHttpError } from './GlitchKitHttpVersionNotSupportedHttpError';
 export { default as GkInsufficientStorageHttpError } from './GlitchKitInsufficientStorageHttpError';
 export { default as GkInternalServerErrorHttpError } from './GlitchKitInternalServerErrorHttpError';
+export { default as GkInternalServerHttpError } from './GlitchKitInternalServerHttpError'; // 500
 export { default as GkLoopDetectedHttpError } from './GlitchKitLoopDetectedHttpError';
 export { default as GkNetworkAuthenticationRequiredHttpError } from './GlitchKitNetworkAuthenticationRequiredHttpError';
 export { default as GkNotExtendedHttpError } from './GlitchKitNotExtendedHttpError';

@@ -50,7 +50,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && jest"
+    "test": "npm run build && jest",
+    "test:coverage": "npm run build && jest --coverage"
   },
   "bugs": {
     "url": "https://github.com/manuabhijit/glitchkit/issues"
@@ -58,6 +59,7 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^30.0.0",
+    "ts-jest": "^29.4.0",
     "typescript": "^5.8.3"
   },
   "gitHead": "414f9113878f4c6e5c48ca8c477a00482731926d"

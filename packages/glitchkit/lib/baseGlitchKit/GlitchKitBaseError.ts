@@ -2,10 +2,16 @@ import GlitchKitMetadata from '../utility/GlitchKitMetadata';
 import GlitchKitTraceability from '../utility/GlitchKitTraceability';
 import IGlitchKitBaseErrorJson from './interfaces/GlitchKitBaseError.interface';
 
+/**
+ * Base class for all GlitchKit errors.
+ * Provides common properties and methods for error handling.
+ */
 abstract class GlitchKitBaseError extends Error {
+  // Properties for traceability and metadata
   public traceability = new GlitchKitTraceability();
   public metadata = new GlitchKitMetadata();
 
+  // Properties for error code, timestamp, and duration
   private _errorCode?: number;
   private _timestamp: Date;
   private _durationMs?: number;
