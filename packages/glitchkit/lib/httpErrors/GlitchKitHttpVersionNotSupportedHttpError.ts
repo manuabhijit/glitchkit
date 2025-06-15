@@ -7,6 +7,7 @@ class GlitchKitHttpVersionNotSupportedHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitHttpVersionNotSupportedHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitHttpVersionNotSupportedHttpError;
   }

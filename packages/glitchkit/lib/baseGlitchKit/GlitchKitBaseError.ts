@@ -1,9 +1,9 @@
 import GlitchKitMetadata from '../utility/GlitchKitMetadata';
-import Traceability from '../utility/Traceability';
+import GlitchKitTraceability from '../utility/GlitchKitTraceability';
 
 class GlitchKitBaseError extends Error {
-  public traceability = new Traceability();
-  public glitchKitMetadata = new GlitchKitMetadata();
+  public traceability = new GlitchKitTraceability();
+  public metadata = new GlitchKitMetadata();
 
   private _errorCode?: number;
   private _timestamp: Date;
@@ -61,7 +61,7 @@ class GlitchKitBaseError extends Error {
       stack: this.stack,
       timestamp: this._timestamp.toISOString(),
       durationMs: this._durationMs,
-      metadata: this.glitchKitMetadata.toJson(),
+      metadata: this.metadata.toJson(),
       traceability: this.traceability.toJson(),
     };
   }

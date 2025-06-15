@@ -1,4 +1,4 @@
-class Traceability {
+class GlitchKitTraceability {
   protected _traceId?: string;
   protected _operation?: string;
   protected _reported?: boolean;
@@ -66,4 +66,4 @@ class Traceability {
   }
 }
 
-export default Traceability;
+export default GlitchKitTraceability;

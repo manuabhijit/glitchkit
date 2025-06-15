@@ -7,6 +7,7 @@ class GlitchKitImATeapotHttpError extends GlitchKitBaseHttpError {
     Object.setPrototypeOf(this, GlitchKitImATeapotHttpError.prototype);
     Error.captureStackTrace(this, this.constructor);
   }
+
   static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitImATeapotHttpError;
   }
