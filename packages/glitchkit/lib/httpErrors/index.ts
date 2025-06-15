@@ -27,7 +27,7 @@ import GlitchKitUnprocessableEntityHttpError from './GlitchKitUnprocessableEntit
 import GlitchKitUnsupportedMediaTypeHttpError from './GlitchKitUnsupportedMediaTypeHttpError'; // 415
 import GlitchKitUpgradeRequiredHttpError from './GlitchKitUpgradeRequiredHttpError'; // 426
 import GlitchKitUriTooLongHttpError from './GlitchKitUriTooLongHttpError'; // 414
-
+// 5xx Server Errors
 import GlitchKitBadGatewayHttpError from './GlitchKitBadGatewayHttpError'; // 502
 import GlitchKitGatewayTimeoutHttpError from './GlitchKitGatewayTimeoutHttpError'; // 504
 import GlitchKitHttpVersionNotSupportedHttpError from './GlitchKitHttpVersionNotSupportedHttpError'; // 505
