@@ -102,7 +102,7 @@ This include all other 4xx errors.
 | 502       | `GkBadGatewayHttpError`          | Server received an invalid response from an upstream server. |
 | 503       | `GkServiceUnavailableHttpError`  | Server is currently unavailable.                             |
 
-This include all other 4xx errors.
+This include all other 5xx errors.
 
 ## Database
 
