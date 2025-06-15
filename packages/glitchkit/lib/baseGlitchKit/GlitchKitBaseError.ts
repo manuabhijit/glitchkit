@@ -1,9 +1,9 @@
 import GlitchKitMetadata from '../utility/GlitchKitMetadata';
-import Traceability from '../utility/Traceability';
+import GlitchKitTraceability from '../utility/GlitchKitTraceability';
 
 class GlitchKitBaseError extends Error {
-  public traceability = new Traceability();
-  public glitchKitMetadata = new GlitchKitMetadata();
+  public traceability = new GlitchKitTraceability();
+  public metadata = new GlitchKitMetadata();
 
   private _errorCode?: number;
   private _timestamp: Date;
@@ -11,7 +11,6 @@ class GlitchKitBaseError extends Error {
 
   constructor(message: string, errorCode?: number) {
     super(message);
-    this.name = 'GlitchKitError';
     this._errorCode = errorCode;
     this._timestamp = new Date();
 
@@ -49,7 +48,7 @@ class GlitchKitBaseError extends Error {
     return this;
   }
 
-  public static isInstance(error: unknown): error is GlitchKitBaseError {
+  public static isInstance(error: unknown): boolean {
     return error instanceof GlitchKitBaseError;
   }
 
@@ -61,7 +60,7 @@ class GlitchKitBaseError extends Error {
       stack: this.stack,
       timestamp: this._timestamp.toISOString(),
       durationMs: this._durationMs,
-      metadata: this.glitchKitMetadata.toJson(),
+      metadata: this.metadata.toJson(),
       traceability: this.traceability.toJson(),
     };
   }
